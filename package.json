@@ -47,5 +47,9 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:taniarascia/webpack-boilerplate"
+  },
+  "dependencies": {
+    "svg-inline-loader": "^0.8.2",
+    "svg-url-loader": "^8.0.0"
   }
 }
