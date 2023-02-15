@@ -3,9 +3,11 @@
 //$fontfamily: 'Lato', sans-serif;
 $minwidth: 320px;
 
-// @import 'mixins';
+@import 'mixins';
+@import 'iconsfont';
 // @import 'normalizer';
-// @import 'ibg';
-// @import 'style';
+@import 'ibg';
+@import 'style';
 @import 'header';
+
 // @import 'footer'
