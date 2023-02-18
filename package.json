@@ -1,7 +1,6 @@
 {
-  "name": "template",
-  "version": "3.0.1",
-  "description": "webpage",
+  "name": "travellian",
+  "version": "0.1.0",
   "main": "index.js",
   "author": "Ganna Kulyk",
   "scripts": {
