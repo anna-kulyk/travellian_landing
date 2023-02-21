@@ -1,5 +1,9 @@
 body {
     display: none;
+    
+    &.lock {
+        position: fixed;
+    }
 }
 
 .wrapper{
@@ -24,7 +28,7 @@ body {
 // }
 
 ._link {
-    @media (any-hover: hover) {
+    @media (any-hover: hover) and (min-width: #{$md2 + px}) {
         &:hover {
             padding: 3px 0;
             border-bottom: 3px $mainColor solid;
