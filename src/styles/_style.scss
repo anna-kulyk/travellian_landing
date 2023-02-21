@@ -1,3 +1,7 @@
+body {
+    display: none;
+}
+
 .wrapper{
     overflow: hidden;
     min-height: 100%;
@@ -5,8 +9,8 @@
 }
 
 .container {
-    // max-width: 1130px;
-    padding: 0px 15px;
+    max-width: 1620px;
+    padding: 0px 30px;
     margin: 0 auto;
 }
 
@@ -18,8 +22,24 @@
 //     height: 100%;
 //     @include flexbox();
 // }
-//=============================================================================
 
-// @media (max-width:1500px) {}
+._link {
+    @media (any-hover: hover) {
+        &:hover {
+            padding: 3px 0;
+            border-bottom: 3px $mainColor solid;
+        }
+    }
+}
 
-//=============================================================================
+._btn {
+    padding: 20px 30px;
+    background-color: $mainColor;
+    border-radius: 12px;
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: $secondaryColor;
+        }
+    }
+}

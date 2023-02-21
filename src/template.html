@@ -8,12 +8,14 @@
   </head>
   <body>
     <div class="wrapper">
-      <!-- header -->
-      <%= require('partials/header.html?raw') %>
+      <main class="page">
+        <!-- header -->
+        <%= require('partials/header.html?raw') %>
 
-      <!-- main -->
-      <h1>HOMEPAGE</h1>
-      <img src="<%= require('./assets/images/main/01.jpg') %>" alt="" width="400px">
+        <div class="main-screen"></div>
+      </main>
+
+      <!-- <img src="<%= require('./assets/images/main/01.jpg') %>" alt="" width="400px"> -->
 
       <!-- footer -->
       <%= require('partials/footer.html?raw') %>
