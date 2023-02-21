@@ -2,7 +2,10 @@
     background-color: rgb(10, 27, 81);
 }
 
-.header__logo {
+._icon-logo {
     color: white;
     font-size: 45px;
+}
+.mobile-header {
+    display: none;
 }
