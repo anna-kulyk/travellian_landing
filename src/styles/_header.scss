@@ -63,6 +63,9 @@
 }
 
 .menu-header {
+    @media (min-width: #{$md2 + px}) {
+        margin: 0 30px;
+    }
     // .menu-header__body
     &__body {
     }
@@ -98,6 +101,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        flex-wrap: wrap;
         gap: 35px;
 
         @media (max-width: #{$md2 + px}) {
