@@ -12,7 +12,52 @@
         <!-- header -->
         <%= require('partials/header.html?raw') %>
 
-        <div class="main-screen"></div>
+        <div class="main-screen">
+          <div class="main-screen__container container">
+            <div class="main-screen__wrapper">
+              <div class="main-screen__content">
+                <h1 class="main-screen__title">Start your unforgettable journey with us.</h1>
+                <h2 class="main-screen__subtitle">The best travel for your journey begins now</h2>
+              </div>
+              <div class="main-screen__form form-main">
+                <form action="GET" class="form-main__body">
+                  <div class="form-main__inputs">
+                    <div class="form-main__column">
+                      <label for="destination">Destination</label>
+                      <input type="text" name="destination" id="destination" class="form-main__destination" placeholder="Dubai">
+                    </div>
+                    <div class="form-main__column">
+                      <label for="travelers">Travelers</label>
+                      <select name="travelers" id="travelers"  class="form-main__travelers">
+                        <option value="1">1</option>
+                        <option value="2" selected>2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                      </select>
+                    </div>
+                    <div class="form-main__column">
+                      <label for="checkin">Check in</label>
+                      <input type="date" name="checkin" id="checkin" class="form-main__checkin" value="2023-09-17">
+                    </div>
+                    <div class="form-main__column">
+                      <label for="checkout">Check out</label>
+                      <input type="date" name="checkin" id="checkin" class="form-main__checkout" value="2023-10-17">
+                    </div>
+                  </div>
+                  <div class="form-main__submit submit-main">
+                    <button type="submit" class="submit-main__btn _icon-arrow">Book Now</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
 
       <!-- <img src="<%= require('./assets/images/main/01.jpg') %>" alt="" width="400px"> -->
