@@ -102,25 +102,17 @@ body {
     color: #ffffff;
     border-radius: 12px;
     transition: background-color 0.3s ease 0s;
+    background-color: $mainColor;
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: $secondaryColor;
+        }
+    }
 
-    // .slider-arrow_main
-    &_main {
-        background-color: $mainColor;
-        @media (any-hover: hover) {
-            &:hover {
-                background-color: $secondaryColor;
-            }
-        }
-    }
-    // .slider-arrow_sec
-    &_sec {
+    &.swiper-button-disabled {
         background-color: $secondaryColor;
-        @media (any-hover: hover) {
-            &:hover {
-                background-color: $mainColor;
-            }
-        }
     }
+
     // .slider-arrow_prev
     &_prev {
         &::before {
