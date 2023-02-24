@@ -27,12 +27,23 @@ if (document.querySelector('.slider-offer__body')) {
         modules: [Navigation],
 		observer: true,
 		observeParents: true,
-		slidesPerView: 2,
+		slidesPerView: 1,
 		spaceBetween: 32,
+        breakpoints: {
+            // when window width is >= 767.98px
+            767.98: {
+              slidesPerView: 2
+            },
+            // when window width is >= 1150px
+            1150: {
+              slidesPerView: 3
+            },
+        },
 		watchOverflow: true,
-		speed: false,
+		speed: 800,
 		loop: true,
-		preloadImages: true,
+		loopAdditionalSlides: 5,
+		preloadImages: false,
 		// Arrows
 		navigation: {
 			nextEl: '.slider-offer .slider-arrow_next',
