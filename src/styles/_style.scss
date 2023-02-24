@@ -46,12 +46,95 @@ body {
 
 ._btn {
     padding: 20px 30px;
+    color: #ffffff;
     background-color: $mainColor;
     border-radius: 12px;
-    transition: all 0.3s ease 0s;
+    transition: background-color 0.3s ease 0s;
     @media (any-hover: hover) {
         &:hover {
             background-color: $secondaryColor;
+        }
+    }
+}
+
+    
+._section-title {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    @include adaptiv-value('font-size', 64, 40, 1);
+    @include adaptiv-value('line-height', 85, 53, 1);
+    color: #172432;
+    width: fit-content;
+    position: relative;
+    padding: 0px 0px 20px 0px;
+
+    &:not(:last-child) {
+        margin: 0 0 calc(32px/64px * 1em) 0;
+    }
+
+    &::after {
+        content: '';
+        width: 60%;
+        height: 3px;
+        background-color: $mainColor;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+._section-description {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    @include adaptiv-value('font-size', 24, 18, 1);
+    @include adaptiv-value('line-height', 28, 21, 1);
+    color: #767E86;
+}
+
+.slider-arrows {
+    display: flex;
+    gap: 40px;
+}
+.slider-arrow {
+    padding: 20px 22px;
+    color: #ffffff;
+    border-radius: 12px;
+    transition: background-color 0.3s ease 0s;
+
+    // .slider-arrow_main
+    &_main {
+        background-color: $mainColor;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $secondaryColor;
+            }
+        }
+    }
+    // .slider-arrow_sec
+    &_sec {
+        background-color: $secondaryColor;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $mainColor;
+            }
+        }
+    }
+    // .slider-arrow_prev
+    &_prev {
+        &::before {
+            display: block;
+            transform: rotate(90deg);
+            padding-top: 5px;
+        }
+    }
+    // .slider-arrow_next
+    &_next {
+        &::before {
+            display: block;
+            transform: rotate(-90deg);
+            padding-top: 5px;
         }
     }
 }

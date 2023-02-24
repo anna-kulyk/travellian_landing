@@ -16,17 +16,17 @@ function burgerMenuOnOff() {
     document.querySelector("body").classList.toggle('lock');
 }
 
-// function ibg(){
-//     let elements = document.querySelectorAll('.ibg');
-//     elements?.forEach(function(item){
-//         let image = item.querySelector('img');
-//         if( image.src.length > 0 ){
-//             item.style.backgroundImage = `url("${image.src}")`;
-//         }
-//     });
-// }
+function ibg(){
+    let elements = document.querySelectorAll('._ibg');
+    elements?.forEach(function(item){
+        let image = item.querySelector('img');
+        if( image.src.length > 0 ){
+            item.style.backgroundImage = `url("${image.src}")`;
+        }
+    });
+}
 
-// ibg();
+ibg();
 
 //=================================================================================
 

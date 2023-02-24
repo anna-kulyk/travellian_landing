@@ -48,6 +48,7 @@
   "dependencies": {
     "svg-inline-loader": "^0.8.2",
     "svg-url-loader": "^8.0.0",
+    "swiper": "^9.0.5",
     "uuid": "^9.0.0"
   }
 }
