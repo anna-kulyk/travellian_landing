@@ -21,3 +21,22 @@ if (document.querySelector('.slider-dest__body')) {
 		}
 	});
 }
+
+if (document.querySelector('.slider-offer__body')) {
+    new Swiper('.slider-offer__body', {
+        modules: [Navigation],
+		observer: true,
+		observeParents: true,
+		slidesPerView: 2,
+		spaceBetween: 32,
+		watchOverflow: true,
+		speed: false,
+		loop: true,
+		preloadImages: true,
+		// Arrows
+		navigation: {
+			nextEl: '.slider-offer .slider-arrow_next',
+			prevEl: '.slider-offer .slider-arrow_prev',
+		}
+	});
+}
