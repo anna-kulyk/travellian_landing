@@ -194,3 +194,124 @@
         }
     }
 }
+
+//====================== Popular Destinations ===============================
+
+.destinations {
+    @include adaptiv-value('padding-top', 140, 80, 1);
+    @include adaptiv-value('padding-bottom', 140, 80, 1);
+    // .destinations__container
+    &__container {
+    }
+    // .destinations__text
+    &__text {
+        max-width: 75%;
+    }
+    // .destinations__title
+    &__title {
+    }
+    // .destinations__description
+    &__description {
+    }
+    // .destinations__slider
+    &__slider {
+        min-width: 0;
+    }
+}
+
+.slider-dest {
+    margin: 100px 0px 0px 0px;
+    position: relative;
+    // .slider-dest__arrows
+    &__arrows {
+        position: absolute;
+        right: 0;
+        top: -100px;
+        transform: translate(0px, -100%);
+    }
+    // .slider-dest__body
+    &__body {
+        &.swiper {
+            overflow: visible;
+        }
+    }
+    // .slider-dest__wrapper
+    &__wrapper {
+    }
+    // .slider-dest__slide
+    &__slide {
+        position: relative;
+        overflow: hidden;
+        border-radius: 26px;
+
+        &.swiper-slide {
+            width: 375px;
+            height: 500px;
+        }
+    }
+    // .slider-dest__image
+    &__image {
+        height: 100%;
+        width: 100%;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transform: scale(1);
+            transition: all 0.7s ease 0.1s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(255, 119, 87, 0.1);
+        }
+    }
+    // .slider-dest__content
+    &__content {
+        position: absolute;
+        bottom: 40px;
+        left: 24px;
+        pointer-events: none;
+    }
+    // .slider-dest__title
+    &__title {
+        font-family: 'Playfair Display';
+        font-style: normal;
+        font-weight: 500;
+        @include adaptiv-value('font-size', 28, 24, 1);
+        @include adaptiv-value('line-height', 37, 32, 1);
+        color: #FFFFFF;
+        &:not(:last-child) {
+            margin: 0px 0px calc(16px/28px * 1em) 0px;
+        }
+    }
+    // .slider-dest__location
+    &__location {
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 400;
+        @include adaptiv-value('font-size', 24, 18, 1);
+        @include adaptiv-value('line-height', 28, 21, 1);
+        color: #FFFFFF;
+        display: flex;
+        gap: 16px;
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}

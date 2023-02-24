@@ -58,9 +58,89 @@
             </div>
           </div>
         </div>
+        <section class="destinations">
+          <div class="destinations__container container">
+            <div class="destinations__text">
+              <h3 class="destinations__title _section-title">Popular Destinations</h3>
+              <p class="destinations__description _section-description">
+                Most popular destinations around the world, from historical places to natural wonders.
+              </p>
+            </div>
+            <div class="destinations__slider slider-dest">
+              <div class="slider-dest__arrows slider-arrows">
+                <button type="button" class="slider-arrow slider-arrow_sec slider-arrow_prev _icon-chevron"></button>
+                <button type="button" class="slider-arrow slider-arrow_main slider-arrow_next _icon-chevron"></button>
+              </div>
+              <div class="slider-dest__body swiper">
+                <div class="slider-dest__wrapper swiper-wrapper">
+                  <div class="swiper-slide slider-dest__slide">
+                    <a href="" class="slider-dest__image">
+                      <img src="<%= require('./assets/images/dest/01.jpg') %>" alt="image">
+                    </a>
+                    <div class="slider-dest__content">
+                      <div class="slider-dest__title">Monument of Berlin</div>
+                      <div class="slider-dest__location">
+                        <img src="<%= require('./assets/images/icons/location.png') %>" alt="icon">
+                        <p>Berlin, Germany</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slider-dest__slide swiper-slide">
+                    <a href="" class="slider-dest__image">
+                      <img src="<%= require('./assets/images/dest/02.jpg') %>" alt="image">
+                    </a>
+                    <div class="slider-dest__content">
+                      <div class="slider-dest__title">Millennium Bridge</div>
+                      <div class="slider-dest__location">
+                        <img src="<%= require('./assets/images/icons/location.png') %>" alt="icon">
+                        <p>London, United Kingdom</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slider-dest__slide swiper-slide">
+                    <a href="" class="slider-dest__image">
+                      <img src="<%= require('./assets/images/dest/03.jpg') %>" alt="image">
+                    </a>
+                    <div class="slider-dest__content">
+                      <div class="slider-dest__title">Rialto Bridge</div>
+                      <div class="slider-dest__location">
+                        <img src="<%= require('./assets/images/icons/location.png') %>" alt="icon">
+                        <p>Venice, Italy</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slider-dest__slide swiper-slide">
+                    <a href="" class="slider-dest__image">
+                      <img src="<%= require('./assets/images/dest/04.jpg') %>" alt="image">
+                    </a>
+                    <div class="slider-dest__content">
+                      <div class="slider-dest__title">Sea of Orange Tiles</div>
+                      <div class="slider-dest__location">
+                        <img src="<%= require('./assets/images/icons/location.png') %>" alt="icon">
+                        <p>Lisbon, Portugal</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="slider-dest__slide swiper-slide">
+                    <a href="" class="slider-dest__image">
+                      <img src="<%= require('./assets/images/dest/05.jpg') %>" alt="image">
+                    </a>
+                    <div class="slider-dest__content">
+                      <div class="slider-dest__title">Maidan Nezalezhnosti</div>
+                      <div class="slider-dest__location">
+                        <img src="<%= require('./assets/images/icons/location.png') %>" alt="icon">
+                        <p>Kyiv, Ukraine</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
-      <!-- <img src="<%= require('./assets/images/main/01.jpg') %>" alt="" width="400px"> -->
+      <!-- <img src="<%= require('./assets/images/main/01.jpg') %>" alt=""> -->
 
       <!-- footer -->
       <%= require('partials/footer.html?raw') %>
