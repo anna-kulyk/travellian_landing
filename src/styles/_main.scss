@@ -542,6 +542,21 @@
     &__image {
         border-radius: 26px;
         position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            border-radius: 26px;
+            background: rgba(0, 0, 0, 0.2);
+            z-index: 2;
+            pointer-events: none;
+        }
+
         @media (max-width: #{$md3 + px}) {
             @include adaptiv-value('height', 800, 315, 1);
         }
