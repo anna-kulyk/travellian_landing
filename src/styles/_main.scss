@@ -686,6 +686,7 @@
     }
     // .slider-gallery__image
     &__image {
+        display: block;
         &::before {
             content: "";
             display: block;
