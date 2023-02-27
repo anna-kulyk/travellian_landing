@@ -76,11 +76,18 @@ if (document.querySelector('.slider-gallery__body')) {
         modules: [Navigation],
 		observer: true,
 		observeParents: true,
-		slidesPerView: 'auto',
+		slidesPerView: 1,
+        breakpoints: {
+            // when window width is >= 767.98px
+            767.98: {
+              slidesPerView: 4
+            },
+        },
 		spaceBetween: 32,
 		watchOverflow: true,
 		speed: 800,
-		loop: false,
+        loop: true,
+		loopAdditionalSlides: 5,
 		preloadImages: false,
 		// Arrows
 		navigation: {
