@@ -96,3 +96,22 @@ if (document.querySelector('.slider-gallery__body')) {
 		}
 	});
 }
+
+if (document.querySelector('.slider-planner__body')) {
+    new Swiper('.slider-planner__body', {
+        modules: [Navigation],
+		observer: true,
+		observeParents: true,
+		slidesPerView: 'auto',
+		spaceBetween: 32,
+		watchOverflow: true,
+		speed: 800,
+        loop: false,
+		preloadImages: false,
+		// Arrows
+		navigation: {
+			nextEl: '.slider-planner__arrows .slider-arrow_next',
+			prevEl: '.slider-planner__arrows .slider-arrow_prev',
+		}
+	});
+}
