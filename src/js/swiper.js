@@ -51,3 +51,22 @@ if (document.querySelector('.slider-offer__body')) {
 		}
 	});
 }
+
+if (document.querySelector('.slider-reviews__body')) {
+    new Swiper('.slider-reviews__body', {
+        modules: [Navigation],
+		observer: true,
+		observeParents: true,
+		slidesPerView: 'auto',
+		spaceBetween: 32,
+		watchOverflow: true,
+		speed: 800,
+		loop: false,
+		preloadImages: false,
+		// Arrows
+		navigation: {
+			nextEl: '.slider-reviews .slider-arrow_next',
+			prevEl: '.slider-reviews .slider-arrow_prev',
+		}
+	});
+}
