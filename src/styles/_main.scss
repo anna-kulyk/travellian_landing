@@ -542,6 +542,21 @@
     &__image {
         border-radius: 26px;
         position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            border-radius: 26px;
+            background: rgba(0, 0, 0, 0.2);
+            z-index: 2;
+            pointer-events: none;
+        }
+
         @media (max-width: #{$md3 + px}) {
             @include adaptiv-value('height', 800, 315, 1);
         }
@@ -604,6 +619,116 @@
                     color: $secondaryColor;
                 }
             }
+        }
+    }
+}
+
+//======================== Trip Planners ================================
+
+//===================== Destination Gallery =============================
+
+//==================== Traveler’s Experiences ============================
+
+.reviews {
+    @include adaptiv-value('padding-top', 100, 50, 1);
+    @include adaptiv-value('padding-bottom', 100, 50, 1);
+    // .reviews__container
+    &__container {
+    }
+    // .reviews__header
+    &__header {
+    }
+    // .reviews__title
+    &__title {
+    }
+    // .reviews__description
+    &__description {
+    }
+    // .reviews__slider
+    &__slider {
+        min-width: 0;
+    }
+}
+
+.slider-reviews {
+    // .slider-reviews__body
+    &__body {
+        @include adaptiv-value('margin-top', 120, 75, 1);
+        @include adaptiv-value('margin-bottom', 100, 50, 1);
+        overflow: visible;
+    }
+    // .slider-reviews__wrapper
+    &__wrapper {
+    }
+    // .slider-reviews__slide
+    &__slide {
+        @include adaptiv-value('max-width', 650, 290, 1);
+        @media (max-width: #{$md4 + px}) {
+            max-width: 100%;
+        }
+        position: relative;
+    }
+    // .slider-reviews__image
+    &__image {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: 40px;
+        transform: translate(0, -50%);
+
+        @media (max-width: #{$md4 + px}) {
+            left: 20px;
+        }
+    }
+    // .slider-reviews__content
+    &__content {
+        background-color: #F5F6F7;
+        padding: 60px 40px 40px;
+
+        @media (max-width: #{$md4 + px}) {
+            padding: 60px 20px 32px;
+        }
+    }
+    // .slider-reviews__text
+    &__text {
+        text-align: justify;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 128%;
+        color: #767E86;
+    }
+    // .slider-reviews__rating
+    &__rating {
+        font-size: 24px;
+        color: #FFC107;
+        margin: 20px 0px;
+    }
+    // .slider-reviews__name
+    &__name {
+        font-family: 'Playfair Display';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        color: #767E86;
+        &:not(:last-child) {
+            margin-bottom: 4px;
+        }
+    }
+    // .slider-reviews__position
+    &__position {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        color: #767E86;
+    }
+    // .slider-reviews__arrows
+    &__arrows {
+        justify-content: flex-end;
+        @media (max-width: #{$md3 + px}) {
+            justify-content: center;
         }
     }
 }
