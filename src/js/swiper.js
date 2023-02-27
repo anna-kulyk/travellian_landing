@@ -70,3 +70,29 @@ if (document.querySelector('.slider-reviews__body')) {
 		}
 	});
 }
+
+if (document.querySelector('.slider-gallery__body')) {
+    new Swiper('.slider-gallery__body', {
+        modules: [Navigation],
+		observer: true,
+		observeParents: true,
+		slidesPerView: 1,
+        breakpoints: {
+            // when window width is >= 767.98px
+            767.98: {
+              slidesPerView: 4
+            },
+        },
+		spaceBetween: 32,
+		watchOverflow: true,
+		speed: 800,
+        loop: true,
+		loopAdditionalSlides: 5,
+		preloadImages: false,
+		// Arrows
+		navigation: {
+			nextEl: '.slider-gallery .slider-arrow_next',
+			prevEl: '.slider-gallery .slider-arrow_prev',
+		}
+	});
+}

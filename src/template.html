@@ -249,10 +249,50 @@
             </div>
           </div>
         </section>
+        <section class="gallery">
+          <div class="gallery__container container">
+            <div class="gallery__header">
+              <h3 class="gallery__title _section-title">Destination Gallery</h3>
+              <p class="gallery__description _section-description">
+                Our photo gallery on trip
+              </p>
+            </div>
+            <div class="gallery__slider slider-gallery">
+              <div class="slider-gallery__arrows slider-arrows">
+                <button type="button" class="slider-arrow slider-arrow_prev _icon-chevron"></button>
+                <button type="button" class="slider-arrow slider-arrow_next _icon-chevron"></button>
+              </div>
+              <div class="slider-gallery__body swiper">
+                <div class="slider-gallery__wrapper swiper-wrapper">
+                  <div class="swiper-slide slider-gallery__slide">
+                    <a href="<%= require('./assets/images/gallery/01.jpg') %>" class="slider-gallery__image">
+                      <img src="<%= require('./assets/images/gallery/01.jpg') %>" alt="image">
+                    </a>
+                  </div>
+                  <div class="swiper-slide slider-gallery__slide">
+                    <a href="<%= require('./assets/images/gallery/02.jpg') %>" class="slider-gallery__image">
+                      <img src="<%= require('./assets/images/gallery/02.jpg') %>" alt="image">
+                    </a>
+                  </div>
+                  <div class="swiper-slide slider-gallery__slide">
+                    <a href="<%= require('./assets/images/gallery/03.jpg') %>" class="slider-gallery__image">
+                      <img src="<%= require('./assets/images/gallery/03.jpg') %>" alt="image">
+                    </a>
+                  </div>
+                  <div class="swiper-slide slider-gallery__slide">
+                    <a href="<%= require('./assets/images/gallery/04.jpg') %>" class="slider-gallery__image">
+                      <img src="<%= require('./assets/images/gallery/04.jpg') %>" alt="image">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section class="reviews">
           <div class="reviews__container container">
             <div class="reviews__header">
-              <h3 class="reviews__title _section-title">Traveler’s Experiences</h3>
+              <h3 class="reviews__title _section-title">Traveler&#8217s Experiences</h3>
               <p class="reviews__description _section-description">
                 Here some awesome feedback from our travelers
               </p>
