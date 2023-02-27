@@ -674,7 +674,7 @@
         overflow: hidden;
         @media (min-width: #{$md3 + px}) {  
             margin: 35px 0px;
-            transition: all 0.5s ease 0s;
+            transition: transform 0.5s ease 0s;
             transform: translate(0, 0);
         }
 
@@ -686,7 +686,6 @@
     }
     // .slider-gallery__image
     &__image {
-        cursor: pointer;
         &::before {
             content: "";
             display: block;
