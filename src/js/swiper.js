@@ -105,11 +105,13 @@ if (document.querySelector('.slider-planner__body')) {
 		slidesPerView: 'auto',
 		spaceBetween: 0,
         direction: 'vertical',
+		cssMode: true,
         breakpoints: {
             // when window width is >= 767.98px
             767.98: {
                 direction: 'horizontal',
                 spaceBetween: 32,
+				cssMode: false,
             },
         },
 		watchOverflow: true,

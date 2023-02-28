@@ -739,7 +739,6 @@
 
         @media (max-width: #{$md3 + px}) {
             width: 100%;
-            overflow-y: scroll;
             &:not(:last-child) {
                 margin-bottom: 40px;
             }
