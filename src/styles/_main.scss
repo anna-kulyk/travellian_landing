@@ -619,6 +619,221 @@
 
 //======================== Trip Planners ================================
 
+.planner {
+    @include adaptiv-value('padding-top', 100, 50, 1);
+    @include adaptiv-value('padding-bottom', 100, 50, 1);
+    // .planner__container
+    &__container {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: #{$md3 + px}) {
+            flex-direction: column;
+
+        }
+    }
+    // .planner__header
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 100%;
+        z-index: 10;
+        background-color: #FFFFFF;
+        position: relative;
+
+        @media (min-width: #{$md3 + px}) {
+            max-width: 450px;
+            margin-right: 50px;
+            outline: #FFFFFF solid 50px;
+            box-sizing: content-box;
+
+            &::before {
+                content: '';
+                width: 100vw;
+                height: calc(100% + 100px);
+                background-color: #FFFFFF;
+                position: absolute;
+                right: 100%;
+                top: -50px;
+                z-index: 10;
+            }
+        }
+    }
+    // .planner__title
+    &__title {
+    }
+    // .planner__description
+    &__description {
+    }
+    // .planner__btn
+    &__btn {
+        margin: 50px;
+        position: relative;
+        // z-index: 10;
+        display: block;
+
+        &::before {
+            content: '';
+            background-color: #172432;
+            display: block;
+            position: absolute;
+            width: 43px;
+            height: 43px;
+            top: -15px;
+            left: -15px;
+            z-index: -1;
+        }
+
+        &::after {
+            content: '';
+            background-color: #767E86;
+            display: block;
+            position: absolute;
+            width: 43px;
+            height: 43px;
+            bottom: -15px;
+            right: -15px;
+            z-index: -1;
+        }
+    }
+    // .planner__slider
+    &__slider {
+        min-width: 0;
+    }
+}
+
+.slider-planner {
+    width: 100%;
+    // .slider-planner__arrows
+    &__arrows {
+        align-self: flex-end;
+    }
+    // .slider-planner__body
+    &__body {
+        overflow: visible;
+        z-index: 4;
+    }
+    // .slider-planner__wrapper
+    &__wrapper {
+    }
+    // .slider-planner__slide
+    &__slide {
+        
+        @include adaptiv-value('width', 300, 240, 1);
+        position: relative;
+
+        @media (any-hover: hover) and (min-width: #{$md3 + px}) {
+            margin: 50px 0px;
+            @include adaptiv-value('height', 400, 320, 1);
+            &:hover {
+                .slider-planner__image {
+                    transform: translate(0, -50px);
+                }
+                .slider-planner__label {  
+                    opacity: 1;
+                    transform: translate(0, 100%);                
+                }
+            }
+        }
+
+        @media (max-width: #{$md3 + px}) {
+            width: 100%;
+            &:not(:last-child) {
+                margin-bottom: 40px;
+            }
+        }
+    }
+    // .slider-planner__image
+    &__image {
+        display: block;
+        @include adaptiv-value('height', 400, 320, 1);
+        position: relative;
+        z-index: 4;
+        transform: translate(0, 0);
+        border-radius: 26px;
+        overflow: hidden;
+        transition: transform 0.5s ease 0s;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.2);
+            pointer-events: none;
+        }
+    }
+    // .slider-planner__label
+    &__label {
+
+        @media (any-hover: hover)  and (min-width: #{$md3 + px}) {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            opacity: 0;
+            z-index: 2;
+            transform: translate(0, 0);
+            transition: all 0.5s ease 0s;
+        }
+    }
+}
+
+.label-planner {
+    width: 100%;
+    margin: 20px 0px;
+    // .label-planner__row
+    &__row {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    // .label-planner__name
+    &__name {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        text-transform: uppercase;
+        color: #172432;
+    }
+    // .label-planner__price
+    &__price {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        color: #172432;
+    }
+    // .label-planner__location
+    &__location {
+        font-family: 'Playfair Display';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 37px;
+        color: #172432;
+        margin: 12px 0px;
+    }
+    // .label-planner__rating
+    &__rating {
+        font-size: 24px;
+        color: #FFC107;
+    }
+    // .label-planner__duration
+    &__duration {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+        color: #172432;
+    }
+}
+
 //===================== Destination Gallery =============================
 
 .gallery {
