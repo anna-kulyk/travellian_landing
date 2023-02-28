@@ -483,9 +483,23 @@
             </div>
           </div>
         </section>
+        <section class="subscribe">
+          <div class="subscribe__container container">
+            <div class="subscribe__wrapper">
+              <div class="subscribe__title">Our Newsletter</div>
+            <form action="" class="subscribe__form form-subscribe">
+              <div class="form-subscribe__column">
+                <label class="form-subscribe__label" for="email">Email</label>
+                <input class="form-subscribe__input" type="email" name="email" id="email" placeholder="Enter your email" required>
+              </div>
+              <div class="form-subscribe__column">
+                <button class="form-subscribe__btn _btn" type="submit">Subscribe</button>
+              </div>
+            </form>
+            </div>
+          </div>
+        </section>
       </main>
-
-      <!-- <img src="<%= require('./assets/images/main/01.jpg') %>" alt=""> -->
 
       <!-- footer -->
       <%= require('partials/footer.html?raw') %>

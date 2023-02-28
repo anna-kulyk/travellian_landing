@@ -888,7 +888,7 @@
         border-radius: 26px;
         overflow: hidden;
         @media (min-width: #{$md3 + px}) {  
-            margin: 35px 0px;
+            margin: 35px 0px 0px;
             transition: transform 0.5s ease 0s;
             transform: translate(0, 0);
         }
@@ -1027,3 +1027,108 @@
         }
     }
 }
+
+//==================== Subscribe Form ============================
+
+.subscribe {
+    @media (min-width: #{$md2 + px}) {
+        height: 100px;
+    }
+    // .subscribe__container
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    //.subscribe__wrapper
+    &__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 60px;
+        padding: 60px;
+        width: fit-content;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.3);
+        background-color: #FFFFFF;
+        border-radius: 26px;
+
+        @media (max-width: #{$md2 + px}) {
+            width: 100%;
+            padding: 40px;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        @media (max-width: #{$md4 + px}) {
+            width: 100%;
+            padding: 40px 20px;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    // .subscribe__title
+    &__title {
+        font-family: 'Playfair Display';
+        font-style: normal;
+        font-weight: 400;
+        @include adaptiv-value('font-size', 64, 40, 1);
+        line-height: 133%;
+        color: #767E86;
+    }
+    // .subscribe__form
+    &__form {
+        display: flex;
+        align-items: flex-end;
+        gap: 32px;
+
+        @media (max-width: #{$md2 + px}) {
+            width: 100%;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+.form-subscribe {
+    // .form-subscribe__column
+    &__column {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        @media (max-width: #{$md2 + px}) {
+            &:first-child {
+                flex: 1 1 auto;
+            }
+        }
+        @media (max-width: #{$md4 + px}) {
+            width: 100%;
+        }
+    }
+    // .form-subscribe__label
+    &__label {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: #767E86;
+    }
+    // .form-subscribe__input
+    &__input {
+        color: #767E86;
+        padding: 20px 30px;
+        background-color: #FFE8D4;
+        border-radius: 12px;
+        min-width: 250px;
+
+        &::placeholder {
+            color: $mainColor;
+        }
+
+        @media (max-width: #{$md2 + px}) {
+            min-width: none;
+        }
+    }
+    // .form-subscribe__btn
+    &__btn {
+    }
+}
+
