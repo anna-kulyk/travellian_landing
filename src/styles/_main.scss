@@ -108,6 +108,8 @@
             @include adaptiv-value('font-size', 20, 14, 1);
             line-height: 135%;
             color: #172432;
+            border-radius: 0px;
+            border: none;
             border-bottom: 1px black solid;
             background-color: #FFFFFF;
 
@@ -737,6 +739,7 @@
 
         @media (max-width: #{$md3 + px}) {
             width: 100%;
+            overflow-y: scroll;
             &:not(:last-child) {
                 margin-bottom: 40px;
             }

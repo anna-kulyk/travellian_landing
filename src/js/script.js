@@ -47,7 +47,7 @@ window.onload = function () {
 
     function documentSubmitActions(e) {
         const targetElement = e.target;
-        if (targetElement.classList.closest('subscribe__form')) {
+        if (targetElement.classList.contains('subscribe__form') || targetElement.classList.contains('form-main__body')) {
             e.preventDefault();
             targetElement.reset();
         }
