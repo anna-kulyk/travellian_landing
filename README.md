@@ -1,4 +1,4 @@
-# Progect name
+# Travellian Landing Page
 
 Travel Agency Landing page.
 Portfolio project.
