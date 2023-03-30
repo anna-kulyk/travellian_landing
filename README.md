@@ -1,7 +1,6 @@
 # Travellian Landing Page
 
 Travel Agency Landing page.
-Portfolio project.
 
 ## [Check the live demo](https://travellian-landing-page.netlify.app/)
 
